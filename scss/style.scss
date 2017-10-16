@@ -1,0 +1,106 @@
+$quicksand: 'Quicksand', sans-serif;
+$slabo: 'Slabo 27px', serif;
+
+$midnight: #bdc3c7;
+$clouds: #ecf0f1;
+$shadow: #7f8c8d;
+
+body {
+  background: $midnight;
+  text-align: center;
+}
+
+.message {
+  text-align: center;
+  color: $clouds;
+  animation: message 5s ease-in infinite;
+  margin: 100px;
+  font: {
+    size: 25px;
+    family: $slabo;
+  };
+  letter-spacing: 10px;
+  text-shadow: -2px 2px $shadow;
+}
+
+@function makelongshadow($color) {
+  $val: 0px 0px $color;
+  @for $i from 1 through 10 {
+    $val: #{$val}, -#{$i}px #{$i}px #{$color};
+  }
+  @return $val;
+}
+
+$color: #16a085;
+
+.text {
+  margin-left: -30px; /* optical correction */
+}
+
+p {
+  left: 0;
+  margin-top:30vh;
+  width: 10vw;
+  display: inline-block;
+  font: {
+    size: 0px;
+    family: $quicksand;
+  };
+  color:#fff;
+  letter-spacing: 1px;
+}
+
+@for $i from 1 to 10 {
+  p:nth-child(#{$i}) { 
+  text-shadow: makelongshadow(adjust-hue($color, $i * 100));
+  animation: showup 5s infinite $i * 0.30s; }
+}
+
+@keyframes showup {
+  0% {
+    font-size:0px;
+    transform:rotate(90deg);
+  }
+
+  5% {
+    font-size: 66px;
+    transform:rotate(0deg);
+  }
+
+  
+  70% {
+    font-size:66px;
+    opacity: 1; 
+    transform:rotate(0deg);
+  }
+  
+  80% {
+    font-size: 3px;
+    opacity: 0;
+    transform:rotate(-180deg);
+  }
+  100% {
+    opacity: 0;
+    font-size: 66px;
+    transform:rotate(0deg);
+  }
+}
+
+@keyframes message {
+  0% { opacity: 0; }
+  30% { opacity: 1; }
+  70% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+
+
+
+
+
+
+
+
+// inspiration from Nooray Yermon
+// https://codepen.io/yemon/pen/YraNLQ
+

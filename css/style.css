@@ -1,0 +1,116 @@
+body {
+  background: #bdc3c7;
+  text-align: center;
+}
+
+.message {
+  text-align: center;
+  color: #ecf0f1;
+  animation: message 5s ease-in infinite;
+  margin: 100px;
+  font-size: 25px;
+  font-family: "Slabo 27px", serif;
+  letter-spacing: 10px;
+  text-shadow: -2px 2px #7f8c8d;
+}
+
+.text {
+  margin-left: -30px;
+  /* optical correction */
+}
+
+p {
+  left: 0;
+  margin-top: 30vh;
+  width: 10vw;
+  display: inline-block;
+  font-size: 0px;
+  font-family: "Quicksand", sans-serif;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+p:nth-child(1) {
+  text-shadow: 0px 0px #5716a0, -1px 1px #5716a0, -2px 2px #5716a0, -3px 3px #5716a0, -4px 4px #5716a0, -5px 5px #5716a0, -6px 6px #5716a0, -7px 7px #5716a0, -8px 8px #5716a0, -9px 9px #5716a0, -10px 10px #5716a0;
+  animation: showup 5s infinite 0.3s;
+}
+
+p:nth-child(2) {
+  text-shadow: 0px 0px #a02916, -1px 1px #a02916, -2px 2px #a02916, -3px 3px #a02916, -4px 4px #a02916, -5px 5px #a02916, -6px 6px #a02916, -7px 7px #a02916, -8px 8px #a02916, -9px 9px #a02916, -10px 10px #a02916;
+  animation: showup 5s infinite 0.6s;
+}
+
+p:nth-child(3) {
+  text-shadow: 0px 0px #31a016, -1px 1px #31a016, -2px 2px #31a016, -3px 3px #31a016, -4px 4px #31a016, -5px 5px #31a016, -6px 6px #31a016, -7px 7px #31a016, -8px 8px #31a016, -9px 9px #31a016, -10px 10px #31a016;
+  animation: showup 5s infinite 0.9s;
+}
+
+p:nth-child(4) {
+  text-shadow: 0px 0px #165fa0, -1px 1px #165fa0, -2px 2px #165fa0, -3px 3px #165fa0, -4px 4px #165fa0, -5px 5px #165fa0, -6px 6px #165fa0, -7px 7px #165fa0, -8px 8px #165fa0, -9px 9px #165fa0, -10px 10px #165fa0;
+  animation: showup 5s infinite 1.2s;
+}
+
+p:nth-child(5) {
+  text-shadow: 0px 0px #a0168d, -1px 1px #a0168d, -2px 2px #a0168d, -3px 3px #a0168d, -4px 4px #a0168d, -5px 5px #a0168d, -6px 6px #a0168d, -7px 7px #a0168d, -8px 8px #a0168d, -9px 9px #a0168d, -10px 10px #a0168d;
+  animation: showup 5s infinite 1.5s;
+}
+
+p:nth-child(6) {
+  text-shadow: 0px 0px #a08516, -1px 1px #a08516, -2px 2px #a08516, -3px 3px #a08516, -4px 4px #a08516, -5px 5px #a08516, -6px 6px #a08516, -7px 7px #a08516, -8px 8px #a08516, -9px 9px #a08516, -10px 10px #a08516;
+  animation: showup 5s infinite 1.8s;
+}
+
+p:nth-child(7) {
+  text-shadow: 0px 0px #16a057, -1px 1px #16a057, -2px 2px #16a057, -3px 3px #16a057, -4px 4px #16a057, -5px 5px #16a057, -6px 6px #16a057, -7px 7px #16a057, -8px 8px #16a057, -9px 9px #16a057, -10px 10px #16a057;
+  animation: showup 5s infinite 2.1s;
+}
+
+p:nth-child(8) {
+  text-shadow: 0px 0px #2916a0, -1px 1px #2916a0, -2px 2px #2916a0, -3px 3px #2916a0, -4px 4px #2916a0, -5px 5px #2916a0, -6px 6px #2916a0, -7px 7px #2916a0, -8px 8px #2916a0, -9px 9px #2916a0, -10px 10px #2916a0;
+  animation: showup 5s infinite 2.4s;
+}
+
+p:nth-child(9) {
+  text-shadow: 0px 0px #a01631, -1px 1px #a01631, -2px 2px #a01631, -3px 3px #a01631, -4px 4px #a01631, -5px 5px #a01631, -6px 6px #a01631, -7px 7px #a01631, -8px 8px #a01631, -9px 9px #a01631, -10px 10px #a01631;
+  animation: showup 5s infinite 2.7s;
+}
+
+@keyframes showup {
+  0% {
+    font-size: 0px;
+    transform: rotate(90deg);
+  }
+  5% {
+    font-size: 66px;
+    transform: rotate(0deg);
+  }
+  70% {
+    font-size: 66px;
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  80% {
+    font-size: 3px;
+    opacity: 0;
+    transform: rotate(-180deg);
+  }
+  100% {
+    opacity: 0;
+    font-size: 66px;
+    transform: rotate(0deg);
+  }
+}
+@keyframes message {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
